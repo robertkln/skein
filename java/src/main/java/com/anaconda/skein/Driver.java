@@ -124,7 +124,7 @@ public class Driver {
         .forServer(certBytes.newInput(), keyBytes.newInput())
         .trustManager(certBytes.newInput())
         .clientAuth(ClientAuth.REQUIRE)
-        .sslProvider(SslProvider.OPENSSL)
+        .sslProvider(SslProvider.JDK)
         .build();
 
     NioEventLoopGroup eg = new NioEventLoopGroup(NUM_EVENT_LOOP_GROUP_THREADS);
